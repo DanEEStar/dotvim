@@ -3,56 +3,38 @@
 
 set nocompatible                  " Must come first because it changes other options.
 
-filetype off
 call pathogen#infect()
 
-filetype plugin indent on         " Turn on file type detection.
-syntax enable                     " Turn on syntax highlighting.
+runtime! plugin/sensible.vim      " load the sensible settings
+
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
-set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
 set encoding=utf-8                " Use UTF-8 everywhere.
-
-set backspace=indent,eol,start    " Intuitive backspacing.
 set cursorline                    " highlights the current line
-
 set hidden                        " Handle multiple buffers better.
-
-set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
-
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
-
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
-
-set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
-
 set wrap                          " Turn on line wrapping.
-set scrolloff=3                   " Show 3 lines of context around the cursor.
-
 set title                         " Set the terminal's title
-
 set visualbell                    " No beeping.
-
 set relativenumber                " shows the numbers relative at the beginning
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
-
 set undofile  " creates a persistent file with undo commands
 
 set gdefault  " substitutions are globally in file
 
 let mapleader = ","  " the , is no the leader key
 
-nnoremap <leader><space> :noh<cr> " clears out the search by taping comma space
 " nnoremap <tab> %
 " vnoremap <tab> %  " move around matching pairs with tab
 
@@ -92,23 +74,6 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
-
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
-
-" For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
-autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 " call with :Stab
