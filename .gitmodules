@@ -28,3 +28,9 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-arduino-syntax"]
+	path = bundle/vim-arduino-syntax
+	url = https://github.com/sudar/vim-arduino-syntax
+[submodule "bundle/dart-vim-plugin"]
+	path = bundle/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin
