@@ -115,6 +115,8 @@ let g:neocomplcache_enable_at_startup = 1
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 2
 
+let g:syntastic_javascript_checkers = ['jshint']
+
 " stuff from vim masterclass
 :vnoremap . :norm.<CR>
 :vnoremap @ :norm@
