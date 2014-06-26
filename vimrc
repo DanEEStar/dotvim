@@ -4,10 +4,49 @@
 set nocompatible                  " Must come first because it changes other options.
 filetype off
 
-call pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-runtime! plugin/sensible.vim      " load the sensible settings
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-sensible.git'
+Plugin 'tpope/vim-classpath.git'
+Plugin 'guns/vim-clojure-static.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'lambdatoast/elm.vim.git'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'Shougo/neocomplcache.vim.git'
+Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'rodjek/vim-puppet.git'
+Plugin 'wting/rust.vim.git'
+Plugin 'ervandew/supertab.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'leafgarland/typescript-vim.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'jdonaldson/vaxe.git'
+Plugin 'sudar/vim-arduino-syntax'
+Plugin 'kchmck/vim-coffee-script.git'
+Plugin 'derekwyatt/vim-scala'
 
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
