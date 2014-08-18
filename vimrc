@@ -31,6 +31,12 @@ Plugin 'jdonaldson/vaxe.git'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'kchmck/vim-coffee-script.git'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'sophacles/vim-processing'
+Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'tpope/vim-projectionist.git'
+Plugin 'Raimondi/delimitMate'
 
 
 " All of your Plugins must be added before the following line
@@ -73,7 +79,7 @@ set undofile  " creates a persistent file with undo commands
 
 set gdefault  " substitutions are globally in file
 
-let mapleader = ","  " the , is no the leader key
+" let mapleader = ","  " the , is now the leader key
 
 " nnoremap <tab> %
 " vnoremap <tab> %  " move around matching pairs with tab
@@ -155,6 +161,12 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 2
 
 let g:syntastic_javascript_checkers = ['jshint']
+
+" open Nerdtree when no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" close vim when only NERDTree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " stuff from vim masterclass
 :vnoremap . :norm.<CR>
