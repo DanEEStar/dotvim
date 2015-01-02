@@ -18,7 +18,8 @@ Plugin 'kien/ctrlp.vim.git'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'lambdatoast/elm.vim.git'
 Plugin 'jnwhiteh/vim-golang'
-Plugin 'Shougo/neocomplcache.vim.git'
+" Plugin 'Shougo/neocomplcache.vim.git'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'rodjek/vim-puppet.git'
 Plugin 'wting/rust.vim.git'
@@ -37,6 +38,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'tpope/vim-projectionist.git'
 Plugin 'Raimondi/delimitMate'
+Plugin 'zah/nimrod.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -153,10 +155,6 @@ endfunction
 " enable xml-reformating
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Set minimum syntax keyword length.
-"let g:neocomplcache_min_syntax_length = 3
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 2
 
