@@ -17,7 +17,7 @@ Plugin 'guns/vim-clojure-static.git'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'lambdatoast/elm.vim.git'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 " Plugin 'Shougo/neocomplcache.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter.git'
@@ -39,6 +39,8 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'tpope/vim-projectionist.git'
 Plugin 'Raimondi/delimitMate'
 Plugin 'zah/nimrod.vim'
+Plugin 'bling/vim-airline'
+Plugin 'mattn/emmet-vim'
 
 
 " All of your Plugins must be added before the following line
